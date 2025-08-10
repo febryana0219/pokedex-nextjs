@@ -18,8 +18,8 @@ Menampilkan daftar Pokémon, detail setiap Pokémon, dan informasi tipe dengan U
 
 1. **Clone repository**
    ```bash
-   git clone https://github.com/username/pokedex.git
-   cd pokedex
+   git clone https://github.com/febryana0219/pokedex-nextjs.git
+   cd pokedex-nextjs
    ```
 
 2. **Install dependencies**
