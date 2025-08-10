@@ -4,8 +4,6 @@ import Link from "next/link";
 import { typeColors } from "@/lib/typeColors";
 
 // Mapping warna background berdasarkan tipe pertama
-
-
 export default function PokemonCard({ pokemon }) {
   const type = pokemon.types[0].type.name;
   const bgColor = typeColors[type] || typeColors.default;

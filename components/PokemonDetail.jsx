@@ -39,7 +39,7 @@ export default function PokemonDetail({ name }) {
   if (loading || !data || !species) {
     return (
       <div className="flex items-center justify-center h-screen">
-        <img src="/gif/loading.gif" alt="Loading..." className="w-100 h-auto" />
+        <img src="/gif/loading-unscreen.gif" alt="Loading..." className="w-100 h-auto" />
       </div>
     )
   }
@@ -47,7 +47,7 @@ export default function PokemonDetail({ name }) {
   if (backLoading) {
     return (
       <div className="flex items-center justify-center h-screen">
-        <img src="/gif/loading.gif" alt="Loading..." className="w-100 h-auto" />
+        <img src="/gif/loading-unscreen.gif" alt="Loading..." className="w-100 h-auto" />
       </div>
     )
   }
@@ -200,7 +200,6 @@ export default function PokemonDetail({ name }) {
             })}
           </div>
         )}
-
 
         {activeTab === 'evolution' && (
           <div className="flex items-center gap-4 flex-wrap justify-center text-black">
