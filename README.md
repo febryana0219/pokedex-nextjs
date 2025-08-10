@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📦 Pokedex
 
-## Getting Started
+Aplikasi **Pokedex** berbasis **Next.js 15** dengan **React 19** dan **Tailwind CSS 4**.  
+Menampilkan daftar Pokémon, detail setiap Pokémon, dan informasi tipe dengan UI yang responsif.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Fitur Utama
+- 📋 **List Pokémon** lengkap dengan gambar, nama, dan tipe.
+- 🔍 **Halaman detail Pokémon** dengan informasi lengkap.
+- 🎨 **UI responsif** menggunakan Tailwind CSS.
+- ⚡ **Optimasi gambar otomatis** dengan `next/image`.
+- 🌈 **Warna background dinamis** berdasarkan tipe Pokémon.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📥 Instalasi
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clone repository**
+   ```bash
+   git clone https://github.com/username/pokedex.git
+   cd pokedex
+   ```
 
-## Learn More
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+   atau jika menggunakan yarn:
+   ```bash
+   yarn install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. **Jalankan mode development**
+   ```bash
+   npm run dev
+   ```
+   atau:
+   ```bash
+   yarn dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Buka di browser**
+   ```
+   http://localhost:3000
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🎨 Teknologi yang Digunakan
+- [Next.js 15](https://nextjs.org/) - Framework React modern
+- [React 19](https://react.dev/) - Library UI JavaScript
+- [Tailwind CSS 4](https://tailwindcss.com/) - Styling berbasis utility
+- [Lucide Icons](https://lucide.dev/) - Ikon vektor modern
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📜 Lisensi
+Proyek ini bersifat **open-source** dan menggunakan lisensi MIT.  
+Silakan digunakan, dimodifikasi, dan dikembangkan.
+
+**Author:** Febryana  
+**Tech Stack:** Next.js 15, React 19, Tailwind CSS 4, Lucide Icons   
+**Node Version:** v22.15.0 (LTS)
