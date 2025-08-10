@@ -75,7 +75,7 @@ export default function Page() {
       <div className="flex items-center justify-center h-screen bg-white dark:bg-gray-900">
         <div className="w-100">
           <Image
-            src="/gif/loading-unscreen.gif"
+            src="/gif/loading.gif.gif"
             alt="Loading..."
             width={0}
             height={0}
