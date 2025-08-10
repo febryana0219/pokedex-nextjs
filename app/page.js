@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import PokemonCard from "@/components/PokemonCard"
 import Image from "next/image"
+import LoadingSpinner from '@/components/LoadingSpinner'
 
 export default function Page() {
   const [pokemons, setPokemons] = useState([])
@@ -73,19 +74,7 @@ export default function Page() {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-screen bg-white dark:bg-gray-900">
-        <div className="w-100">
-          <Image
-            src="/gif/loading.gif"
-            alt="Loading..."
-            width={0}
-            height={0}
-            sizes="100vw"
-            unoptimized
-            priority
-            className="w-full h-auto"
-            style={{ aspectRatio: 'auto' }}
-          />
-        </div>
+        <LoadingSpinner size={200} />
       </div>
     )
   }

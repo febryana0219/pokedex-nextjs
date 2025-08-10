@@ -1,8 +1,10 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 import { typeColors } from '@/lib/typeColors'
 import { ChevronRight } from 'lucide-react'
+import LoadingSpinner from './LoadingSpinner'
 
 export default function PokemonDetail({ name }) {
   const router = useRouter()
@@ -11,7 +13,6 @@ export default function PokemonDetail({ name }) {
   const [evolution, setEvolution] = useState(null)
   const [loading, setLoading] = useState(true)
   const [activeTab, setActiveTab] = useState('about')
-  const [backLoading, setBackLoading] = useState(false)
 
   useEffect(() => {
     async function fetchData() {
@@ -38,16 +39,8 @@ export default function PokemonDetail({ name }) {
 
   if (loading || !data || !species) {
     return (
-      <div className="flex items-center justify-center h-screen">
-        <img src="/gif/loading.gif" alt="Loading..." className="w-100 h-auto" />
-      </div>
-    )
-  }
-
-  if (backLoading) {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        <img src="/gif/loading.gif" alt="Loading..." className="w-100 h-auto" />
+      <div className="flex items-center justify-center h-screen bg-white dark:bg-gray-900">
+        <LoadingSpinner size={200} />
       </div>
     )
   }
@@ -70,10 +63,11 @@ export default function PokemonDetail({ name }) {
     <div className="max-w-4xl mx-auto space-y-0">
       {/* Header */}
       <div className={`text-center relative overflow-hidden rounded-t-lg shadow bg-gradient-to-br ${bgGradient}`}>
-        <img
+        <Image
           src="/img/pokemon.png"
           alt="Pokemon background"
-          className="absolute inset-0 w-full h-full object-contain opacity-10 pointer-events-none"
+          fill
+          className="object-contain opacity-10 pointer-events-none"
           style={{ filter: 'drop-shadow(0 0 0 transparent)' }}
         />
         <div className="relative z-10 p-4 text-white">
@@ -92,10 +86,12 @@ export default function PokemonDetail({ name }) {
               </span>
             ))}
           </div>
-          <img
+          <Image
             src={img}
             alt={data.name}
-            className="w-48 h-48 object-contain mx-auto relative z-10"
+            width={192}
+            height={192}
+            className="mx-auto relative z-10"
           />
         </div>
       </div>
@@ -231,7 +227,6 @@ export default function PokemonDetail({ name }) {
       {/* Back Button */}
       <button
         onClick={() => {
-          setBackLoading(true)
           setTimeout(() => {
             router.push('/')
           }, 800) // delay biar gif sempat terlihat
